@@ -33,7 +33,7 @@ def download_models():
         {
             'name': 'Zero-shot Classification',
             'task': 'zero-shot-classification',
-            'model': 'valhalla/distilbart-mnli-12-1'
+            'model': 'facebook/bart-large-mnli'
         }
     ]
     

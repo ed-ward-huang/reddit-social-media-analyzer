@@ -61,8 +61,10 @@ The application follows a modern three-tier architecture designed for performanc
 - CORS for cross-origin requests
 
 **Machine Learning Models**:
-- [unitary/toxic-bert](https://huggingface.co/unitary/toxic-bert) - Hate speech detection
 - [cardiffnlp/twitter-roberta-base-sentiment-latest](https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment-latest) - Sentiment analysis
+- [Hate-speech-CNERG/dehatebert-mono-english](https://huggingface.co/Hate-speech-CNERG/dehatebert-mono-english) - Hate speech detection
+- [Hate-speech-CNERG/bert-base-uncased-hatexplain](https://huggingface.co/Hate-speech-CNERG/bert-base-uncased-hatexplain) - Toxicity scoring
+- [facebook/bart-large-mnli](https://huggingface.co/facebook/bart-large-mnli) - Zero-shot classification for hate speech categorization
 - Hugging Face Transformers library for model loading and inference
 
 **Data Sources**:

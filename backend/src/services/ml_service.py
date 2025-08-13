@@ -49,7 +49,7 @@ class MLService:
             try:
                 self.target_group_model = pipeline(
                     "zero-shot-classification",
-                    model="valhalla/distilbart-mnli-12-1",
+                    model="facebook/bart-large-mnli",
                     device=0 if torch.cuda.is_available() else -1
                 )
                 logger.info("Zero-shot target group classifier loaded successfully!")
@@ -57,14 +57,14 @@ class MLService:
                 
                 # Define target group categories for zero-shot classification
                 self.target_categories = [
-                    "targeting people based on race or ethnicity (Black, White, Asian, Chinese, Indian, etc.)",
-                    "targeting people based on religion including Muslim Jewish Christian beliefs", 
-                    "targeting people based on gender sex women or female",
-                    "targeting gay lesbian transgender LGBTQ+ individuals",
-                    "targeting people based on nationality or country of origin, israel palestine american indian chinese japanese african",
-                    "attacking political groups or ideologies like MAGA, Trump supporters, Democrats, Republicans, liberals, conservatives",
-                    "targeting people with disabilities including down syndrome autism ADHD chromosome retardation",
-                    "general offensive language not targeting specific groups",
+                    "race or ethnicity",
+                    "religion",
+                    "sex or gender",
+                    "sexual orientation",
+                    "nationality",
+                    "politics",
+                    "disability",
+                    "other"
                 ]
                 
             except Exception as e:
@@ -193,7 +193,7 @@ class MLService:
             zeroshot_result = self.target_group_model(
                 text, 
                 self.target_categories,
-                hypothesis_template="This text is {}",
+                hypothesis_template="This text is about {}",
                 multi_label=False
             )
             
@@ -202,14 +202,14 @@ class MLService:
             
             # Map zero-shot labels to our categories
             category_mapping = {
-                "racism or ethnic mentions  — Black, White, Asian, Chinese, Indian, African, Indigenous, etc.": "racism",
-                "religion-related mentions  — Muslim, Jewish, Christian, Hindu, Buddhist, etc.": "religion",
-                "sex or gender-based mentions — women, men, girls, boys, etc.": "sexism",
-                "homophobia or transphobia or sexual identity mentions — gay, lesbian, bisexual, transgender, LGBTQ+, etc.": "sexual_orientation",
-                "nationality or country-based mentions — Israeli, Palestinian, American, Chinese, Japanese, African, etc.": "nationality",
-                "political affiliation mentions  — MAGA, Trump supporters, Democrats, Republicans, liberals, conservatives, communists, socialists, etc.": "political_leaning",
-                "ableism or disability-related mentions — Down syndrome, autism, ADHD, retardation, physical disability, etc.": "disability",
-                "general offensive language not targeting specific groups": "other"
+                "race or ethnicity": "racism",
+                "religion": "religion",
+                "sex or gender": "sexism",
+                "sexual orientation": "sexual_orientation",
+                "nationality": "nationality",
+                "politics": "political_leaning",
+                "disability": "disability",
+                "other": "other"
             }
             
             category = category_mapping.get(predicted_category, "other")
