@@ -136,3 +136,4 @@ models/
 # Backup files
 *.bak
 *.backup
+.claude
