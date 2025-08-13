@@ -1,0 +1,13 @@
+# Machine Learning and NLP - Core Requirements
+transformers>=4.35.0
+torch>=2.1.0
+tokenizers>=0.15.0
+
+# Data processing
+numpy>=1.25.0
+
+# Hugging Face model hub access
+huggingface-hub>=0.19.0
+
+# Optional: For better performance with transformers
+accelerate>=0.24.0
