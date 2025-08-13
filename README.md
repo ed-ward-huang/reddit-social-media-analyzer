@@ -2,9 +2,9 @@
 
 A full-stack web application that analyzes social media content for hate speech detection and sentiment analysis using machine learning models. This tool helps identify and categorize toxic content across Reddit and Twitter platforms, providing real-time analytics and visualizations.
 
-<img width="1512" height="743" alt="Screenshot 2025-08-12 at 11 02 16 PM" src="https://github.com/user-attachments/assets/32ba7e76-4d64-42ac-8d65-3da6ff54ecb2" />
+<img width="642" height="739" alt="Screenshot 2025-08-13 at 12 53 56 AM" src="https://github.com/user-attachments/assets/f0eb17c2-ea3f-4b12-9562-688a0673a81a" />
+<img width="648" height="742" alt="Screenshot 2025-08-13 at 12 56 42 AM" src="https://github.com/user-attachments/assets/0f616655-c0c7-4d7b-aea7-4d2e54ec2736" />
 
-<img width="893" height="661" alt="Screenshot 2025-08-12 at 11 03 20 PM" src="https://github.com/user-attachments/assets/57fd2eba-543a-49f8-a055-f6413d4f11c7" />
 
 
 ## Problem Statement
