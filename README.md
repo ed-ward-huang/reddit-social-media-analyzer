@@ -1,4 +1,4 @@
-# Reddit/Twitter Hate Speech Analyzer
+# Reddit/Twitter Hate Speech Analyzer (SubScan)
 
 A full-stack web application that analyzes social media content for hate speech detection and sentiment analysis using machine learning models. This tool helps identify and categorize toxic content across Reddit and Twitter platforms, providing real-time analytics and visualizations.
 
