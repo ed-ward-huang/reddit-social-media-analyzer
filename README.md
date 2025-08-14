@@ -25,7 +25,6 @@ The application follows a modern three-tier architecture designed for performanc
 - Clean, responsive React interface with real-time progress indicators
 - Interactive charts (pie charts for sentiment, radar charts for hate speech categories)
 - Live updates during analysis with progressive data loading
-- Mobile-first responsive design using Tailwind CSS
 
 **Backend Design**:
 - RESTful API with Express.js for handling requests and data processing
